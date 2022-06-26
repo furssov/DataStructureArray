@@ -1,25 +1,25 @@
 package Stack;
 
-public class StackX {
+public class StackX<T> {
     private int maxSize;
-    private int[] stackArray;
+    private T[] stackArray;
     private int top;
 
     public StackX(int maxSize) {
         this.maxSize = maxSize;
-        stackArray = new int[this.maxSize];
+        stackArray = (T[]) new Object[this.maxSize];
         top = -1;
     }
 
-    public void push(int element) {
+    public void push(T element) {
         stackArray[++top] = element;
     }
 
-    public int pop() {
+    public T pop() {
         return stackArray[top--];
     }
 
-    public int peek() {
+    public T peek() {
         return stackArray[top];
     }
 

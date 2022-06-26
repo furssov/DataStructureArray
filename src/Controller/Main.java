@@ -1,5 +1,6 @@
 package Controller;
 
+import Apps.ReverseString;
 import Stack.StackX;
 
 public class Main {
@@ -15,6 +16,12 @@ public class Main {
         {
             System.out.println(stackX.pop());
         }
+
+        //---------------
+        String s = "Java";
+        StackX<Character> characterStackX = new StackX<>(s.length());
+        ReverseString reverseString = new ReverseString(s);
+        System.out.print(reverseString.reverse());
 
     }
 }
