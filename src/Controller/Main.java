@@ -1,27 +1,19 @@
 package Controller;
 
-import Apps.ReverseString;
-import Stack.StackX;
+import Linked.LinkedListX;
 
 public class Main {
     public static void main(String[] args) {
 
-        StackX stackX = new StackX(4);
-        stackX.push(1);
-        stackX.push(2);
-        stackX.push(3);
-        stackX.push(4);
+        LinkedListX<Integer> linkedListX = new LinkedListX<>();
+        linkedListX.addFirst(1);
+        linkedListX.addFirst(2);
+        linkedListX.addFirst(3);
+        linkedListX.addFirst(4);
+        linkedListX.addFirst(5);
+        linkedListX.deleteFirst();
 
-        while (!stackX.isEmpty())
-        {
-            System.out.println(stackX.pop());
-        }
-
-        //---------------
-        String s = "Java";
-        StackX<Character> characterStackX = new StackX<>(s.length());
-        ReverseString reverseString = new ReverseString(s);
-        System.out.print(reverseString.reverse());
+        linkedListX.displayList();
 
     }
 }
